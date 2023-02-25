@@ -1,0 +1,12 @@
+{
+  "identifier": "com.bob-plugin-free-ali-translate",
+  "version": "0.0.1",
+  "category": "translate",
+  "name": "阿里翻译",
+  "summary": "免token调用阿里翻译",
+  "icon": "116",
+  "author": "ayang",
+  "homepage": "https://github.com/bilibili-ayang/bob-plugin-free-ali-translate",
+  "appcast": "https://raw.githubusercontent.com/bilibili-ayang/bob-plugin-free-ali-translate/master/appcast.json",
+  "minBobVersion": "0.5.0"
+}
