@@ -29,6 +29,7 @@ app.listen("5678", () => {
 
 // 翻译 api
 router.post("/translate", async (ctx) => {
+	// body 传 query 为要翻译的内容
 	const { body } = ctx.request;
 
 	const { data: translateResult } = await axios.get(
