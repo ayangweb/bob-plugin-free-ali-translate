@@ -8,9 +8,9 @@
 
 > server 文件夹是 node.js 服务器，可以自行改造后在任意场景下使用！
 
-### bob 翻译插件大合集:
+### bob 插件大合集:
 
-> [chatGPT 翻译插件(免秘钥，免翻)](https://github.com/bilibili-ayang/bob-plugin-free-chatGPT-translate)
+> [chatGPT 插件(免秘钥，免翻)](https://github.com/bilibili-ayang/bob-plugin-free-chatGPT)
 
 > [小牛翻译插件(免秘钥)](https://github.com/bilibili-ayang/bob-plugin-free-calf-translate)
 
