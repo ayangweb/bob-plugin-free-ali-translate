@@ -45,11 +45,18 @@ async function translate(query, completion) {
 
 		if (httpStatusCode !== 200) throw new Error({ message });
 
+		// 处理编码问题，比如 &#39; => '
+		const toParagraphs = data.translateText
+			.replace(/&#(\d+);?/g, (_, number) =>
+				String.fromCharCode(parseInt(number))
+			)
+			.split("\n");
+
 		completion({
 			result: {
 				from: srcLang,
 				to: tgtLang,
-				toParagraphs: data.translateText.split("\n"),
+				toParagraphs,
 			},
 		});
 	} catch ({ message }) {

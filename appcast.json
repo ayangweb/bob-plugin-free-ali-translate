@@ -2,6 +2,13 @@
   "identifier": "com.bob-plugin-free-ali-translate",
   "versions": [
     {
+      "version": "0.0.3",
+      "desc": "修复了编码异常显示的问题",
+      "sha256": "3c6867dc7cc93f19e2105ad6f476b88a8b19efdc0973a5f7efc0691dce200120",
+      "url": "https://github.com/bilibili-ayang/bob-plugin-free-ali-translate/releases/download/v0.0.3/bob-plugin-free-ali-translate.bobplugin",
+      "minBobVersion": "0.5.0"
+    },
+    {
       "version": "0.0.2",
       "desc": "优化了部分代码",
       "sha256": "734d43c0bf303a1d0f029593ea3fab2776f3c6a570af5ba28a4f61e121589d12",

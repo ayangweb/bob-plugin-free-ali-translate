@@ -23,7 +23,7 @@ app.use(bodyParser());
 app.use(router.routes(), router.allowedMethods());
 
 // 监听端口
-app.listen("5678", () => {
+app.listen("5679", () => {
 	console.log("端口号为 5678 的服务器已经启动！");
 });
 
@@ -51,5 +51,8 @@ router.post("/translate", async (ctx) => {
 		}
 	);
 
-	ctx.body = translateResult.data.translateText;
+	ctx.body = translateResult.data.translateText.replace(
+		/&#(\d+);?/g,
+		(_, number) => String.fromCharCode(parseInt(number))
+	);
 });
