@@ -23,7 +23,7 @@ app.use(bodyParser());
 app.use(router.routes(), router.allowedMethods());
 
 // 监听端口
-app.listen("5679", () => {
+app.listen("5678", () => {
 	console.log("端口号为 5678 的服务器已经启动！");
 });
 
