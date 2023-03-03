@@ -37,13 +37,11 @@ async function translate(query, completion) {
 			timeout: 1000 * 60,
 		});
 
-		if (!result?.data) {
-			throw new Error({ message: "bob 内部发生错误！" });
-		}
+		if (!result?.data) throw new Error();
 
-		const { httpStatusCode, data, message } = result.data;
+		const { success, message, data } = result.data;
 
-		if (httpStatusCode !== 200) throw new Error({ message });
+		if (!success) throw new Error(message);
 
 		// 处理编码问题，比如 &#39; => '
 		const toParagraphs = data.translateText
@@ -64,7 +62,6 @@ async function translate(query, completion) {
 			error: {
 				type: "unknown",
 				message,
-				addtion: "如果多次请求失败，请联系插件作者！",
 			},
 		});
 	}

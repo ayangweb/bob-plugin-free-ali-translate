@@ -32,7 +32,7 @@ router.post("/translate", async (ctx) => {
 	// body 传 query 为要翻译的内容
 	const { body } = ctx.request;
 
-	const { data: translateResult } = await axios.get(
+	const { data } = await axios.get(
 		"https://translate.alibaba.com/api/translate/text",
 		{
 			params: {
@@ -51,7 +51,15 @@ router.post("/translate", async (ctx) => {
 		}
 	);
 
-	ctx.body = translateResult.data.translateText.replace(
+	const { success, message, data: translateResult } = data;
+
+	if (!success) {
+		ctx.body = message;
+
+		return;
+	}
+
+	ctx.body = translateResult.translateText.replace(
 		/&#(\d+);?/g,
 		(_, number) => String.fromCharCode(parseInt(number))
 	);

@@ -1,6 +1,6 @@
 {
   "name": "bob-plugin-free-ali-translate",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "description": "bob-plugin-free-ali-translate",
   "main": "index.js",
   "scripts": {
