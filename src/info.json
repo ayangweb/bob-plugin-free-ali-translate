@@ -1,6 +1,6 @@
 {
   "identifier": "com.bob-plugin-free-ali-translate",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "category": "translate",
   "name": "阿里翻译",
   "summary": "免token调用阿里翻译",
